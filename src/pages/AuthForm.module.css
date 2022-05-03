@@ -44,19 +44,19 @@
     align-items: center;
 }
 
-.actions button {
+.actions input {
     cursor: pointer;
     font: inherit;
     color: white;
-    background-color: #9f5ccc;
-    border: 1px solid #9f5ccc;
+    background-color:cornflowerblue;
+    border: 1px solid cornflowerblue;
     border-radius: 4px;
     padding: 0.5rem 2.5rem;
 }
 
-.actions button:hover {
-    background-color: #873abb;
-    border-color: #873abb;
+.actions input:hover {
+    background-color: blue;
+    border-color: blue;
 }
 
 .actions .toggle {

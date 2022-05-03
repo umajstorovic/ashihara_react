@@ -4,6 +4,7 @@ import {useForm} from "react-hook-form";
 
 import * as endpoints from '../const/Endpoints.js';
 import AuthContext from "../store/auth-context";
+import {useNavigate} from "react-router-dom";
 
 const AuthForm = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
@@ -15,6 +16,7 @@ const AuthForm = () => {
     );
 
     const authCtx = useContext(AuthContext);
+    const navigate = useNavigate();
 
     return (
         <section className={classes.auth}>
@@ -41,6 +43,7 @@ const AuthForm = () => {
                                 console.log(response.token);
 
                                 console.log(authCtx.isLoggedIn);
+                                navigate('/home');
                             });
                     } else {
                         console.log("error");
